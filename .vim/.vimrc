@@ -18,6 +18,9 @@ set colorcolumn=80
 " Highlight extraneous whitespace
 match Todo /\s\+$/
 
+" -------------------------------------------------------------------------
+"  Autorun
+" -------------------------------------------------------------------------
 if has("autocmd")
 
   " Enable file type detection.
@@ -43,6 +46,8 @@ if has("autocmd")
     \   exe "normal! g`\"" |
     \ endif
 
+  autocmd VimEnter * NERDTree
+
   augroup END
 
 else
@@ -50,6 +55,11 @@ else
 endif " has("autocmd")
 
 au BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl setf glsl
+
+" -------------------------------------------------------------------------
+" Custom commands
+" -------------------------------------------------------------------------
+command! TrimWs %s/\s\+$//g
 
 " -------------------------------------------------------------------------
 "  Key bindings

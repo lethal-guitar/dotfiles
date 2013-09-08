@@ -18,6 +18,10 @@ set colorcolumn=80
 " Highlight extraneous whitespace
 match Todo /\s\+$/
 
+" YCM config
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
+
 " -------------------------------------------------------------------------
 "  Autorun
 " -------------------------------------------------------------------------
@@ -48,13 +52,13 @@ if has("autocmd")
 
   autocmd VimEnter * NERDTree
 
+  au BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl setf glsl
+
   augroup END
 
 else
   set autoindent        " always set autoindenting on
 endif " has("autocmd")
-
-au BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl setf glsl
 
 " -------------------------------------------------------------------------
 " Custom commands

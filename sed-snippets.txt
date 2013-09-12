@@ -1,0 +1,2 @@
+Join lines with SEP:
+    sed -e :a -e '$!N; s/\n/$SEP/; ta'

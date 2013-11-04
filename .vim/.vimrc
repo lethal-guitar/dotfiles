@@ -14,6 +14,7 @@ set number
 set hls is
 set clipboard=unnamedplus
 set colorcolumn=80
+set backspace=indent,eol,start
 
 " Highlight extraneous whitespace
 match Todo /\s\+$/

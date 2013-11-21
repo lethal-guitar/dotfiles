@@ -12,9 +12,16 @@ set expandtab
 set ruler
 set number
 set hls is
+set hidden
 set clipboard=unnamedplus
 set colorcolumn=80
+set ignorecase
+set smartcase
 set backspace=indent,eol,start
+
+" Prevent beep
+set visualbell
+set noerrorbells
 
 " Highlight extraneous whitespace
 match Todo /\s\+$/
@@ -22,6 +29,8 @@ match Todo /\s\+$/
 " YCM config
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:EclimCompletionMethod = 'omnifunc'
+" let g:ycm_filetype_specific_completion_to_disable = {'php': 1}
 
 " -------------------------------------------------------------------------
 "  Autorun

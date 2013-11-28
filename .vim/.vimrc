@@ -39,6 +39,9 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:EclimCompletionMethod = 'omnifunc'
 " let g:ycm_filetype_specific_completion_to_disable = {'php': 1}
 
+" NERDCommenter config
+let NERDCreateDefaultMappings = 0
+
 " Make search always very magic
 nnoremap / /\v
 vnoremap / /\v
@@ -83,6 +86,7 @@ augroup END
 " Custom commands
 " -------------------------------------------------------------------------
 command! TrimWs %s/\s\+$//g
+command! SudoWrite w !sudo tee % > /dev/null
 
 " -------------------------------------------------------------------------
 "  Key bindings
@@ -99,5 +103,7 @@ imap <C-S-Tab> <Esc>:tabprevious<CR>i
 map <C-Tab> :tabnext<CR>
 nmap <C-Tab> :tabnext<CR>
 imap <C-Tab> <Esc>:tabnext<CR>i
+
+map <leader>c <plug>NERDCommenterInvert
 
 nnoremap <silent> <F2> :call argumentrewrap#RewrapArguments()<CR>

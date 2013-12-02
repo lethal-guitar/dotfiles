@@ -11,6 +11,7 @@ set shiftwidth=4
 set expandtab
 set ruler
 set number
+set relativenumber
 set hls is
 set hidden
 set cursorline
@@ -75,7 +76,7 @@ augroup vimrcEx
 
     " autocmd GuiEnter * NERDTree
 
-    au BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl setf glsl
+    au BufNewFile,BufRead *.frag,*.vert,*.geom,*.fp,*.vp,*.glsl setf glsl
 
     " Highlight extraneous whitespace
     match Todo /\s\+$/
@@ -107,3 +108,5 @@ imap <C-Tab> <Esc>:tabnext<CR>i
 map <leader>c <plug>NERDCommenterInvert
 
 nnoremap <silent> <F2> :call argumentrewrap#RewrapArguments()<CR>
+
+nnoremap <silent> <leader>gd :YcmCompleter GoToDefinitionElseDeclaration

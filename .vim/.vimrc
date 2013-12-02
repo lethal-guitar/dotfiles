@@ -93,8 +93,10 @@ command! SudoWrite w !sudo tee % > /dev/null
 "  Key bindings
 " -------------------------------------------------------------------------
 
+let mapleader = "-"
+
 " Switch between header/implementation files
-map <F4> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
+map <leader>h :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
 
 " Switch tabs
 map <C-S-Tab> :tabprevious<CR>
@@ -106,7 +108,6 @@ nmap <C-Tab> :tabnext<CR>
 imap <C-Tab> <Esc>:tabnext<CR>i
 
 map <leader>c <plug>NERDCommenterInvert
-
-nnoremap <silent> <F2> :call argumentrewrap#RewrapArguments()<CR>
-
+nnoremap <silent> <leader>rw :call argumentrewrap#RewrapArguments()<CR>
 nnoremap <silent> <leader>gd :YcmCompleter GoToDefinitionElseDeclaration
+map <leader>n :noh<CR>

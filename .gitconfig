@@ -1,0 +1,7 @@
+[user]
+	name = lethal-guitar
+	email = lethal_guitar128@web.de
+[color]
+	ui = true
+[core]
+	pager = less +'/---'

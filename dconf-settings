@@ -1,0 +1,27 @@
+[org/mate/settings-daemon/plugins/media-keys]
+screensaver='<Mod4>l'
+home='<Mod4>e'
+
+[org/mate/power-manager]
+button-lid-ac='suspend'
+button-suspend='suspend'
+sleep-computer-ac=3600
+button-power='interactive'
+sleep-display-ac=600
+
+[org/mate/desktop/peripherals/keyboard/kbd]
+options=['terminate\tterminate:ctrl_alt_bksp', 'caps\tcaps:escape']
+
+[org/mate/marco/global-keybindings]
+panel-run-dialog='<Mod4>r'
+show-desktop='<Mod4>d'
+
+[org/mate/marco/window-keybindings]
+minimize='<Mod4>Down'
+toggle-maximized='<Mod4>Up'
+
+[org/mate/caja/preferences]
+executable-text-activation='display'
+
+[com/linuxmint/mintmenu]
+hot-key=''

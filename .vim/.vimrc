@@ -107,7 +107,11 @@ map <C-Tab> :tabnext<CR>
 nmap <C-Tab> :tabnext<CR>
 imap <C-Tab> <Esc>:tabnext<CR>i
 
-map <leader>c <plug>NERDCommenterInvert
+map <leader>c <plug>NERDCommenterToggle
 nnoremap <silent> <leader>rw :call argumentrewrap#RewrapArguments()<CR>
-nnoremap <silent> <leader>gd :YcmCompleter GoToDefinitionElseDeclaration
+nnoremap <silent> <leader>gd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 map <leader>n :noh<CR>
+
+let g:UltiSnipsExpandTrigger = "<C-s>"
+let g:UltiSnipsJumpForwardTrigger = "<C-s>n"
+let g:UltiSnipsJumpBackwardTrigger = "<C-s>p"

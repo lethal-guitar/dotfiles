@@ -94,6 +94,8 @@ command! SudoWrite w !sudo tee % > /dev/null
 " -------------------------------------------------------------------------
 
 let mapleader = "-"
+map j gj
+map k gk
 
 " Switch between header/implementation files
 map <leader>h :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
@@ -111,6 +113,9 @@ map <leader>c <plug>NERDCommenterToggle
 nnoremap <silent> <leader>rw :call argumentrewrap#RewrapArguments()<CR>
 nnoremap <silent> <leader>gd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 map <leader>n :noh<CR>
+
+" delete line without yanking
+map <leader>d "_dd
 
 let g:UltiSnipsExpandTrigger = "<C-s>"
 let g:UltiSnipsJumpForwardTrigger = "<C-s>n"

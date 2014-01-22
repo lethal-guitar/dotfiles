@@ -89,8 +89,20 @@ augroup END
 
 " Perform some cleanup (whitespace removal, tabs to spaces etc.)
 " on file save if enabled via variable.
+" Also highlight unwanted whitespace.
+highlight ExtraWhitespace ctermbg=red guibg=red
+
 augroup autoTidy
     au!
+
+    " Redefine highlighting group on ColorScheme change
+    au ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+
+    match ExtraWhitespace /\s\+$/
+    au BufWinEnter,InsertLeave * match ExtraWhitespace /\s\+$/
+    au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+    au BufWinLeave * call clearmatches()
+
     au BufWritePre * call s:AutoTidy()
 augroup END
 
@@ -102,9 +114,9 @@ command! SudoWrite w !sudo tee % > /dev/null
 
 function! s:AutoTidy()
     if g:enable_auto_tidy
+        let save_cursor = getpos(".")
         TrimWs
-        " After trimming, revert back to previous cursor position
-        normal ``
+        call setpos(".", save_cursor)
 
         retab
     endif
@@ -137,6 +149,9 @@ map <leader>n :noh<CR>
 
 " delete line without yanking
 map <leader>d "_dd
+
+" Auto-indent (=) in function/block
+map <leader>iif vi{=
 
 let g:UltiSnipsExpandTrigger = "<C-s>"
 let g:UltiSnipsJumpForwardTrigger = "<C-s>n"

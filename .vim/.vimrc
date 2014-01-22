@@ -39,9 +39,13 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:EclimCompletionMethod = 'omnifunc'
 " let g:ycm_filetype_specific_completion_to_disable = {'php': 1}
+let g:ycm_extra_conf_globlist = ['~/Uni/Masterarbeit/softvis-hpi/*']
 
 " NERDCommenter config
 let NERDCreateDefaultMappings = 0
+
+" AutoTidy
+let g:enable_auto_tidy = 1
 
 " Make search always very magic
 nnoremap / /\v
@@ -79,15 +83,32 @@ augroup vimrcEx
     au BufNewFile,BufRead *.frag,*.vert,*.geom,*.fp,*.vp,*.glsl setf glsl
 
     " Highlight extraneous whitespace
-    match Todo /\s\+$/
+    au BufEnter * match Todo /\s\+$/
 
 augroup END
 
+" Perform some cleanup (whitespace removal, tabs to spaces etc.)
+" on file save if enabled via variable.
+augroup autoTidy
+    au!
+    au BufWritePre * call s:AutoTidy()
+augroup END
+
 " -------------------------------------------------------------------------
-" Custom commands
+" Custom commands and functions
 " -------------------------------------------------------------------------
-command! TrimWs %s/\s\+$//g
+command! TrimWs %s/\s\+$//ge
 command! SudoWrite w !sudo tee % > /dev/null
+
+function! s:AutoTidy()
+    if g:enable_auto_tidy
+        TrimWs
+        " After trimming, revert back to previous cursor position
+        normal ``
+
+        retab
+    endif
+endfunction
 
 " -------------------------------------------------------------------------
 "  Key bindings

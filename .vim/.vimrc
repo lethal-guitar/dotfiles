@@ -38,7 +38,6 @@ set noerrorbells
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:EclimCompletionMethod = 'omnifunc'
-" let g:ycm_filetype_specific_completion_to_disable = {'php': 1}
 let g:ycm_extra_conf_globlist = ['~/Uni/Masterarbeit/softvis-hpi/*']
 
 " NERDCommenter config
@@ -52,7 +51,7 @@ nnoremap / /\v
 vnoremap / /\v
 
 " -------------------------------------------------------------------------
-"  Augroups
+"  Augroups and related settings
 " -------------------------------------------------------------------------
 
 " Enable file type detection.
@@ -77,11 +76,14 @@ augroup vimrcEx
     \ if line("'\"") > 1 && line("'\"") <= line("$") |
     \   exe "normal! g`\"" |
     \ endif
+augroup END
+
+augroup various
+    au!
 
     " autocmd GuiEnter * NERDTree
 
     au BufNewFile,BufRead *.frag,*.vert,*.geom,*.fp,*.vp,*.glsl setf glsl
-
 augroup END
 
 " Perform some cleanup (whitespace removal, tabs to spaces etc.)

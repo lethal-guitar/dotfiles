@@ -4,6 +4,14 @@
 alias xclip='xclip -selection CLIPBOARD'
 
 ####################################################################
+# Terminal configuration
+####################################################################
+
+# Prevent automatic overriding of several bindings, like Ctrl-W
+# See .inputrc
+bind 'set bind-tty-special-chars off'
+
+####################################################################
 # Colorful Prompt
 ####################################################################
 use_color=true

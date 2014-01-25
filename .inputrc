@@ -1,0 +1,5 @@
+# Make Ctrl-W respect special characters, not only space
+C-W: backward-kill-word
+
+# Bind Ctrl-J to word-rubout instead, as I don't use it anyway
+C-J: unix-word-rubout

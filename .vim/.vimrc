@@ -52,7 +52,7 @@ nnoremap / /\v
 vnoremap / /\v
 
 " -------------------------------------------------------------------------
-"  Autorun
+"  Augroups
 " -------------------------------------------------------------------------
 
 " Enable file type detection.
@@ -81,9 +81,6 @@ augroup vimrcEx
     " autocmd GuiEnter * NERDTree
 
     au BufNewFile,BufRead *.frag,*.vert,*.geom,*.fp,*.vp,*.glsl setf glsl
-
-    " Highlight extraneous whitespace
-    au BufEnter * match Todo /\s\+$/
 
 augroup END
 

@@ -26,6 +26,7 @@ set gdefault
 set backspace=indent,eol,start
 set splitbelow
 set splitright
+set autoread
 
 " Don't try to highlight very long lines
 set synmaxcol=400

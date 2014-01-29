@@ -2,7 +2,6 @@
 # Aliases
 ####################################################################
 alias xclip='xclip -selection CLIPBOARD'
-alias nerdtreevim="gvim +':NERDTree'"
 
 ####################################################################
 # Terminal configuration

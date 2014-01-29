@@ -3,5 +3,7 @@
 	email = lethal_guitar128@web.de
 [color]
 	ui = true
-[core]
-	pager = less +'/---'
+[push]
+	default = current
+[credential]
+	helper = /usr/local/bin/git-credential-gnome-keyring

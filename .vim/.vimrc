@@ -83,8 +83,6 @@ augroup END
 augroup various
     au!
 
-    " autocmd GuiEnter * NERDTree
-
     au BufNewFile,BufRead *.frag,*.vert,*.geom,*.fp,*.vp,*.glsl setf glsl
 augroup END
 

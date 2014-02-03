@@ -28,9 +28,12 @@ set splitbelow
 set splitright
 set autowrite
 set autoread
+set noswapfile
+set list
+set listchars=tab:▸\ ,extends:❯,precedes:❮
 
 " Don't try to highlight very long lines
-set synmaxcol=400
+set synmaxcol=800
 
 " Prevent beep
 set visualbell

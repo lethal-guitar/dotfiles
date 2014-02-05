@@ -45,6 +45,10 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:EclimCompletionMethod = 'omnifunc'
 let g:ycm_extra_conf_globlist = ['~/Uni/Masterarbeit/softvis-hpi/*']
 
+" Local VimRC config
+let g:localvimrc_persistent = 1
+let g:localvimrc_sandbox = 0
+
 " NERDCommenter config
 let NERDCreateDefaultMappings = 0
 

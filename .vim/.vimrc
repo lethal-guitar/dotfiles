@@ -148,6 +148,8 @@ map <C-Tab> :tabnext<CR>
 nmap <C-Tab> :tabnext<CR>
 imap <C-Tab> <Esc>:tabnext<CR>i
 
+map <C-T> :tabnew<CR>
+
 map <leader>c <plug>NERDCommenterToggle
 nnoremap <silent> <leader>rw :call argumentrewrap#RewrapArguments()<CR>
 nnoremap <silent> <leader>gd :YcmCompleter GoToDefinitionElseDeclaration<CR>

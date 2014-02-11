@@ -119,7 +119,13 @@ command! TrimWs %s/\s\+$//ge
 command! SudoWrite w !sudo tee % > /dev/null
 
 function! s:AutoTidy()
-    if g:enable_auto_tidy
+    let l:enable_auto_tidy = g:enable_auto_tidy
+
+    if exists('b:enable_auto_tidy')
+        let l:enable_auto_tidy = l:enable_auto_tidy && b:enable_auto_tidy
+    endif
+
+    if l:enable_auto_tidy
         let save_cursor = getpos(".")
         TrimWs
         call setpos(".", save_cursor)

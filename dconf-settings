@@ -14,6 +14,7 @@ options=['terminate\tterminate:ctrl_alt_bksp', 'caps\tcaps:escape']
 
 [org/mate/marco/global-keybindings]
 panel-run-dialog='<Mod4>r'
+run-command-terminal='<Mod4>t'
 show-desktop='<Mod4>d'
 
 [org/mate/marco/window-keybindings]
@@ -24,4 +25,7 @@ toggle-maximized='<Mod4>Up'
 executable-text-activation='display'
 
 [com/linuxmint/mintmenu]
-hot-key=''
+hot-key='Menu'
+
+[org/mate/terminal/global]
+use-mnemonics=false

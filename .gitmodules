@@ -50,3 +50,6 @@
 	path = .vim/bundle/localvimrc
 	url = https://github.com/embear/vim-localvimrc.git
 	ignore = dirty
+[submodule ".vim/bundle/vim-template"]
+	path = .vim/bundle/vim-template
+	url = https://github.com/aperezdc/vim-template.git

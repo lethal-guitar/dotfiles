@@ -52,8 +52,12 @@ let g:localvimrc_sandbox = 0
 " NERDCommenter config
 let NERDCreateDefaultMappings = 0
 
+" vim-template config
+let g:templates_no_autocmd = 1
+let g:template_max_depth = 5
+
 " AutoTidy
-let g:enable_auto_tidy = 1
+let g:enable_auto_tidy = 0
 
 " Make search always very magic
 nnoremap / /\v

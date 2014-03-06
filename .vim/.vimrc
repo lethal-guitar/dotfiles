@@ -171,6 +171,10 @@ map <leader>d "_dd
 " Auto-indent (=) in function/block
 map <leader>iif vi{=
 
+" Quickfix next/previous
+map <leader>q :cn<cr>
+map <leader>Q :cprev<cr>
+
 let g:UltiSnipsExpandTrigger = "<C-s>"
 let g:UltiSnipsJumpForwardTrigger = "<C-s>n"
 let g:UltiSnipsJumpBackwardTrigger = "<C-s>p"

@@ -1,0 +1,3 @@
+http://vrapper.sourceforge.net/update-site/unstable
+http://vrapper.sourceforge.net/update-site/stable
+http://matf.github.com/relativenumberruler/updatesite

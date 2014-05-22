@@ -94,7 +94,7 @@ augroup END
 augroup various
     au!
 
-    au BufNewFile,BufRead *.frag,*.vert,*.geom,*.fp,*.vp,*.glsl setf glsl
+    au BufNewFile,BufRead *.frag,*.vert,*.geom,*.fp,*.vp,*.glsl set ft=glsl
 augroup END
 
 " Perform some cleanup (whitespace removal, tabs to spaces etc.)

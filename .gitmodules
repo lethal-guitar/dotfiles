@@ -53,3 +53,10 @@
 [submodule ".vim/bundle/vim-template"]
 	path = .vim/bundle/vim-template
 	url = https://github.com/aperezdc/vim-template.git
+[submodule ".vim/bundle/switch.vim"]
+	path = .vim/bundle/switch.vim
+	url = git@github.com:AndrewRadev/switch.vim.git
+[submodule ".vim/bundle/command-t"]
+	path = .vim/bundle/command-t
+	url = git://git.wincent.com/command-t.git
+	ignore = dirty

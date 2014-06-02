@@ -175,6 +175,10 @@ map <leader>iif vi{=
 map <leader>q :cn<cr>
 map <leader>Q :cprev<cr>
 
+" Ultisnips
 let g:UltiSnipsExpandTrigger = "<C-s>"
 let g:UltiSnipsJumpForwardTrigger = "<C-s>n"
 let g:UltiSnipsJumpBackwardTrigger = "<C-s>p"
+
+" Switch.vim
+map <leader>sw :Switch<cr>
